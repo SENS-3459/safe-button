@@ -2,12 +2,8 @@ import os
 import shutil
 from time import sleep
 temp = os.path.expanduser("~/AppData/Local/Temp") # temp files folder
-opera = os.path.expanduser("~/AppData/Local/Opera Software/Opera GX Stable") # browser cache folder
-disc = os.path.expanduser("~/AppData/Roaming/discord") # disc cache folder
-his1 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/History") # history file
-his2 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/History-journal") # history-journal file
-cook1 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/Cookies") # cookies file
-cook2 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/Cookies-journal") # cookies-journal file
+browser = os.path.expanduser("~/AppData/Local/Google/Chrome/ser Data/Default") # browser cache, history and cookies
+disc = os.path.expanduser("~/AppData/Roaming/discord") # discord cache folder
 
 
 def remove(loc):
@@ -41,30 +37,21 @@ def tempRem():
 
 if __name__ == "__main__":
     sure = input("Sure?")
-    if sure == "f":
-        if remove(opera):
-            print("OperCache- Done")
+    if sure == "y" or "yes":
+        if remove(browser):
+            print("Browser- Done")
         else:
-            print("OperCache- Error Occured")
+            print("Browser- Error Occured")
 
         if remove(disc):
-            print("DiscCache- Done")
+            print("Disc- Done")
         else:
-            print("DiscCache- Error Occured")
-
-        if remove(his1) and remove(his2):
-            print("His- Done")
-        else:
-            print("His- Error Occured")
-
-        if remove(cook1) and remove(cook2):
-            print("Cook- Done")
-        else:
-            print("Cook- Error Occured")
+            print("Disc- Error Occured")
+            
         if tempRem():
-            print("Temp- Done")
+            print("TempFiles- Done")
         else:
-            print("Temp- Error Occured")
+            print("TempFiles- Error Occured")
         sleep(1.5)
     else:
         quit()
