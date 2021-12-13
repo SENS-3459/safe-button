@@ -1,4 +1,6 @@
 # safe-button
+Just a simple program that:
 - Deletes temp files
-- Deletes opera's cache, hisory and cookies
-- Deletes disc cache and log out of it
+- Deletes browser cache, hisory and cookies
+- Deletes disc cache and log out of it  
+Edit paths for ur browser in main.py if u not using chrome
