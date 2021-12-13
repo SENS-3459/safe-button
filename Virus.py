@@ -1,14 +1,13 @@
 import os
 import shutil
 from time import sleep
-
-temp = "C:/Users/Sahaj/AppData/Local/Temp"
-opera = "C:/Users/Sahaj/AppData/Local/Opera Software/Opera GX Stable"
-disc = "C:/Users/Sahaj/AppData/Roaming/discord"
-his1 = "C:/Users/Sahaj/AppData/Roaming/Opera Software/Opera GX Stable/History"
-his2 = "C:/Users/Sahaj/AppData/Roaming/Opera Software/Opera GX Stable/History-journal"
-cook1 = "C:/Users/Sahaj/AppData/Roaming/Opera Software/Opera GX Stable/Cookies"
-cook2 = "C:/Users/Sahaj/AppData/Roaming/Opera Software/Opera GX Stable/Cookies-journal"
+temp = os.path.expanduser("~/AppData/Local/Temp") # temp files folder
+opera = os.path.expanduser("~/AppData/Local/Opera Software/Opera GX Stable") # browser cache folder
+disc = os.path.expanduser("~/AppData/Roaming/discord") # disc cache folder
+his1 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/History") # history file
+his2 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/History-journal") # history-journal file
+cook1 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/Cookies") # cookies file
+cook2 = os.path.expanduser("~/AppData/Roaming/Opera Software/Opera GX Stable/Cookies-journal") # cookies-journal file
 
 
 def remove(loc):
