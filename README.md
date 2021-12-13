@@ -3,4 +3,4 @@ Just a simple program that:
 - Deletes temp files
 - Deletes browser cache, hisory and cookies
 - Deletes discord cache and log out of it    
-  Edit paths for ur browser in main.py if u not using chrome
+  Edit path(s) for ur browser in main.py if u not using chrome
